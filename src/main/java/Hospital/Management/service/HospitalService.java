@@ -1,7 +1,9 @@
 package Hospital.Management.service;
 
-import hospital.hongik_hospital.domain.*;
-import hospital.hongik_hospital.repository.AllRepository;
+import Hospital.Management.domain.All;
+import Hospital.Management.domain.Doctor;
+import Hospital.Management.domain.Reserve;
+import Hospital.Management.repository.AllRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

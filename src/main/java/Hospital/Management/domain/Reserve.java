@@ -14,7 +14,7 @@ import static javax.persistence.FetchType.LAZY;
 public class Reserve {
 
     @Id @GeneratedValue
-    @Column(name = "reserve_id")  //예약번호
+    @Column(name = "reserve_id")
     private Long id;
 
     @ManyToOne(fetch = LAZY,cascade =  CascadeType.ALL)
@@ -25,21 +25,20 @@ public class Reserve {
     @JoinColumn(name = "doctor_id")
     private Doctor doctor;
 
-
     @Enumerated(EnumType.STRING)
     private ReserveStatus reserveStatus;
 
     private LocalDateTime reserveTime;
 
 
-    public static Reserve createReserve(Patient Who,Doctor doctor) {
+    public static Reserve createReserve(Patient patient, Doctor doctor) {
         Reserve reserve = new Reserve();
         reserve.setReserveStatus(ReserveStatus.RESERVE);
         reserve.reserveTime = LocalDateTime.now(); // 일단 현 시간으로
-        reserve.setPatient(Who);
+        reserve.setPatient(patient);
         reserve.setDoctor(doctor);
         return reserve;
-    } //나중에 다른애들 넣어주면 됌  reserveService에서  의사이름, 환자이름으로 바꿔버리자
+    }
 
     private void setPatient(Patient patient){
         this.patient = patient;

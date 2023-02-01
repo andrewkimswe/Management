@@ -1,7 +1,7 @@
 package Hospital.Management.repository;
 
-import hospital.hongik_hospital.domain.Hospital;
-import hospital.hongik_hospital.domain.Patient;
+import Hospital.Management.domain.Hospital;
+import Hospital.Management.domain.Patient;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;

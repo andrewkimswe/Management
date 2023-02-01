@@ -1,12 +1,9 @@
 package Hospital.Management.service;
 
-import hospital.hongik_hospital.domain.Department;
-import hospital.hongik_hospital.domain.Doctor;
-import hospital.hongik_hospital.domain.Hospital;
-import hospital.hongik_hospital.repository.DepartmentRepository;
-import hospital.hongik_hospital.repository.DoctorRepository;
-import hospital.hongik_hospital.repository.PatientRepository;
-import hospital.hongik_hospital.repository.ReserveRepository;
+import Hospital.Management.domain.Department;
+import Hospital.Management.domain.Doctor;
+import Hospital.Management.repository.DepartmentRepository;
+import Hospital.Management.repository.DoctorRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,7 +15,7 @@ public class DoctorService {
     private final DepartmentRepository departmentRepository;
 
     @Transactional
-    public Doctor MakeDocter(Long doctorid,Department department){ //생성되어있는 의사와 진료과 결합
+    public Doctor MakeDocter(Long doctorid, Department department){ //생성되어있는 의사와 진료과 결합
         Doctor doctor = doctorRepository.findById(doctorid);
         doctor.setDepartment(department);
         department.getDoctorList().add(doctor);

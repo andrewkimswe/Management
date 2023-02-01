@@ -1,7 +1,7 @@
 package Hospital.Management.repository;
 
-import hospital.hongik_hospital.domain.Department;
-import hospital.hongik_hospital.domain.Doctor;
+import Hospital.Management.domain.Department;
+import Hospital.Management.domain.Doctor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

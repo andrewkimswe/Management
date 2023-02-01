@@ -1,11 +1,11 @@
 package Hospital.Management.service;
 
-import hospital.hongik_hospital.domain.Doctor;
-import hospital.hongik_hospital.domain.Patient;
-import hospital.hongik_hospital.domain.Reserve;
-import hospital.hongik_hospital.repository.DoctorRepository;
-import hospital.hongik_hospital.repository.PatientRepository;
-import hospital.hongik_hospital.repository.ReserveRepository;
+import Hospital.Management.domain.Doctor;
+import Hospital.Management.domain.Patient;
+import Hospital.Management.domain.Reserve;
+import Hospital.Management.repository.DoctorRepository;
+import Hospital.Management.repository.PatientRepository;
+import Hospital.Management.repository.ReserveRepository;
 import lombok.RequiredArgsConstructor;
 
 import org.springframework.stereotype.Service;

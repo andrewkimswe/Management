@@ -1,7 +1,6 @@
 package Hospital.Management.repository;
 
-import hospital.hongik_hospital.domain.Doctor;
-import hospital.hongik_hospital.domain.Patient;
+import Hospital.Management.domain.Doctor;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import javax.persistence.EntityManager;

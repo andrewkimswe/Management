@@ -1,6 +1,6 @@
 package Hospital.Management.repository;
 
-import hospital.hongik_hospital.domain.Patient;
+import Hospital.Management.domain.Patient;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 

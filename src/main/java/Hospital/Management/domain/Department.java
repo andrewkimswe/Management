@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static javax.persistence.FetchType.*;
+
 @Entity
 @Getter @Setter
 public class Department {
