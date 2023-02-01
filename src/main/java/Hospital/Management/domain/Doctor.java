@@ -14,7 +14,7 @@ import static javax.persistence.FetchType.*;
 
 @Entity
 @Getter @Setter
-@NoArgsConstructor//(access = AccessLevel.PROTECTED)
+@NoArgsConstructor
 public class Doctor {
     public Doctor(String doctorname, String phonenumber, int career, Department department) {
         this.doctorname = doctorname;
@@ -23,8 +23,7 @@ public class Doctor {
         this.department = department;
     }
 
-    @Id
-    @GeneratedValue
+    @Id @GeneratedValue
     @Column(name = "doctor_id")
     private Long id;
 
@@ -39,7 +38,7 @@ public class Doctor {
     private Department department;
 
     @OneToMany(mappedBy = "doctor")
-    private List<Reserve> reserveList = new ArrayList<>();  //환자의 예약정보 나열가능
+    private List<Reserve> reserveList = new ArrayList<>();
 
     public Doctor createDoctor(Department department) {
         Doctor doctor = new Doctor();

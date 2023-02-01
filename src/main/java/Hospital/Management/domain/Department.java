@@ -12,19 +12,18 @@ import static javax.persistence.FetchType.*;
 @Entity
 @Getter @Setter
 public class Department {
-    public Department(String departname, Hospital hospital) {
-        this.departname = departname;
+    public Department(String departmentname, Hospital hospital) {
+        this.departmentname = departmentname;
         this.hospital = hospital;
     }
     protected Department() {
     }
 
-    @Id
-    @GeneratedValue
+    @Id @GeneratedValue
     @Column(name = "department_id")
     private Long id;
 
-    private String departname;
+    private String departmentname;
 
     @ManyToOne(fetch = LAZY,cascade =  CascadeType.ALL)
     @JoinColumn(name = "hospital_id")

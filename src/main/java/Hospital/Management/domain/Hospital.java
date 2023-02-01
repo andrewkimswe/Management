@@ -15,8 +15,7 @@ public class Hospital {
         this.HosName = hosName;
         this.address = address;
     }
-    @Id
-    @GeneratedValue
+    @Id @GeneratedValue
     @Column(name = "hospital_id")
     private Long id;
 
