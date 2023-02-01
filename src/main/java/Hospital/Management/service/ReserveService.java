@@ -29,6 +29,6 @@ public class ReserveService {
     public void cancel(Long reserveId){
         Reserve reserve = reserveRepository.findById(reserveId);
         reserve.cancel();
-        System.out.println("캔슬완료!");
+        System.out.println("예약이 취소되었습니다.");
     }
 }

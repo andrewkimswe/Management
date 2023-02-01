@@ -10,11 +10,11 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "allreserve")
 @Getter @Setter
-@NoArgsConstructor//(access = AccessLevel.PROTECTED)
+@NoArgsConstructor
 public class All {
 
     @Id
-    @GeneratedValue  //예약 전체 출력용!!!!
+    @GeneratedValue
     @Column(name = "all_id")
     private Long id;
 

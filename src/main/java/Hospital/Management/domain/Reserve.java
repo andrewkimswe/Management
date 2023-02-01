@@ -34,7 +34,7 @@ public class Reserve {
     public static Reserve createReserve(Patient patient, Doctor doctor) {
         Reserve reserve = new Reserve();
         reserve.setReserveStatus(ReserveStatus.RESERVE);
-        reserve.reserveTime = LocalDateTime.now(); // 일단 현 시간으로
+        reserve.reserveTime = LocalDateTime.now();
         reserve.setPatient(patient);
         reserve.setDoctor(doctor);
         return reserve;

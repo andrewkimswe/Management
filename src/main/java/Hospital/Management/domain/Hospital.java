@@ -27,11 +27,6 @@ public class Hospital {
     @OneToMany(mappedBy = "hospital")
     List<Department> departmentList = new ArrayList<>();
 
-    //    public static Hospital createHospital(Department department) {
-//        Hospital hospital = new Hospital();
-//        hospital.getDepartmentList().add(department);
-//        return hospital; //병원 설정 전 입니다.
-//    }
     protected Hospital() {
     }
 }

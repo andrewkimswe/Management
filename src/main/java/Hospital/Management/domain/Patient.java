@@ -9,7 +9,7 @@ import java.util.List;
 
 @Entity
 @Getter @Setter
-@NoArgsConstructor//(access = AccessLevel.PROTECTED)
+@NoArgsConstructor
 public class Patient {
     public Patient(String username, int age, Gender gender) {
         this.username = username;
@@ -26,13 +26,13 @@ public class Patient {
 
     private int age;
 
-    @Enumerated(EnumType.STRING)  //맞겠지..?
+    @Enumerated(EnumType.STRING)
     private Gender gender;
 
     public enum Gender {Male, Female}
 
 
     @OneToMany(mappedBy = "patient")
-    private List<Reserve> reserveList = new ArrayList<>();  //환자의 예약정보 나열가능
+    private List<Reserve> reserveList = new ArrayList<>();
 
 }

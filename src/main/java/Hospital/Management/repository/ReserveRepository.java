@@ -15,7 +15,7 @@ public class ReserveRepository{
     @PersistenceContext
     EntityManager em;
 
-    @Transactional  //들어가야되나?
+    @Transactional
     public Long save(Reserve reserve) {
         em.persist(reserve);
         return reserve.getId();

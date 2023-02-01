@@ -14,7 +14,7 @@ public class PatientRepository {
     @PersistenceContext
     EntityManager em;
 
-    @Transactional  //들어가야되나?
+    @Transactional
     public Long save(Patient patient) {
         em.persist(patient);
         return patient.getId();
