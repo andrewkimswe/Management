@@ -27,6 +27,6 @@ public class Hospital {
     @OneToMany(mappedBy = "hospital")
     List<Department> departmentList = new ArrayList<>();
 
-    protected Hospital() {
+    public Hospital() {
     }
 }

@@ -16,7 +16,7 @@ public class Department {
         this.departmentname = departmentname;
         this.hospital = hospital;
     }
-    protected Department() {
+    public Department() {
     }
 
     @Id @GeneratedValue
@@ -25,7 +25,7 @@ public class Department {
 
     private String departmentname;
 
-    @ManyToOne(fetch = LAZY,cascade =  CascadeType.ALL)
+    @ManyToOne(fetch = LAZY, cascade =  CascadeType.ALL)
     @JoinColumn(name = "hospital_id")
     private Hospital hospital;
 

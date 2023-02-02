@@ -1,9 +1,7 @@
 package Hospital.Management.service;
 
-import Hospital.Management.domain.All;
-import Hospital.Management.domain.Doctor;
-import Hospital.Management.domain.Reserve;
-import Hospital.Management.repository.AllRepository;
+import Hospital.Management.domain.*;
+import Hospital.Management.repository.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -13,16 +11,35 @@ import org.springframework.transaction.annotation.Transactional;
 @RequiredArgsConstructor
 public class HospitalService {
 
-    private final AllRepository allRepository;
+    private final DepartmentRepository departmentRepository;
+
+    private final DoctorRepository doctorRepository;
+
+    private final HospitalRepository hospitalRepository;
+
+    private final PatientRepository patientRepository;
+
+    private final ReserveRepository reserveRepository;
 
     @Transactional
     public void create(Reserve reserve, Doctor doctor){
-        All all = new All();
-        all.setTime(reserve.getReserveTime());
-        all.setPatientName(reserve.getPatient().getUsername());
-        all.setDoctor(doctor.getDoctorname());
-        all.setDepartment(doctor.getDepartment().getDepartmentname());
-        all.setHospital(doctor.getDepartment().getHospital().getHosName());
-        allRepository.save(all);
+
+        Reserve reserve1 = new Reserve();
+        Patient patient = new Patient();
+        Doctor doctor1 = new Doctor();
+        Department department = new Department();
+        Hospital hospital = new Hospital();
+
+        reserve1.getReserveTime();
+        patient.getUsername();
+        doctor1.getDoctorname();
+        department.getDepartmentname();
+        hospital.getHosName();
+
+        reserveRepository.save(reserve1);
+        patientRepository.save(patient);
+        doctorRepository.save(doctor);
+        departmentRepository.save(department);
+        hospitalRepository.save(hospital);
     }
 }
